@@ -1,63 +1,119 @@
-body{
-    background-color: gray;
-  }
-  
-  #wordSearchContainer {
-      display: grid;
-      grid-template-columns: repeat(14, 1fr); /* Ajusta según el tamaño deseado */
-      gap: 6px;
-      max-width: 500px; /* Ajusta según el tamaño deseado */
-      margin: 0 auto;
-  }
-  
-  #wordSearchContainer div {
-      width: 50px; /* Ajusta según el tamaño deseado */
-      height: 60px; /* Ajusta según el tamaño deseado */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f0f0f0;
-      cursor: pointer;
-  }
-  
-  #wordSearchContainer div.selected {
-      background-color: #add8e6;
-  }
-  .selected {
-      background-color: #90ee90; /* Un verde claro para las letras seleccionadas */
-  }
-  
-  .found {
-      background-color: #ffcccb; /* Un rojo claro para las palabras encontradas */
-  }
-  .wordsList {
-      margin: 30px auto;
-      max-width: 90vw;
-      padding: 20px;
-      background-color: #f7f7f7;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  
-  .wordsList div {
-      padding: 9px 18px;
-      margin: 5px;
-      background-color: #e0e0e0;
-      border-radius: 4px;
-      font-size: 16px;
-      text-align: center;
-  }
-  
-  .wordsList div.found::after {
-      content: ' ✔️'; /* Añade una palomita después del texto */
-      color: green; /* Color verde para la palomita */
-  }
-  
-  /* Opcionalmente, puedes ajustar el estilo de la palabra encontrada para diferenciarla aún más */
-  .wordsList div.found {
-      background-color: #90ee90; /* Verde claro para indicar que la palabra ha sido encontrada */
-      text-decoration: none; /* Remueve el line-through si prefieres no tachar la palabra */
-  }
+body {
+    background-image: url('depositphotos.jpg'); /* Cambia 'fondo.jpg' por la ruta correcta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(255, 67, 183, 0.8); /* Fondo rosa con opacidad para mejor legibilidad */
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.left-title {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 20px;
+    color: #ff0000; /* Rojo para destacar sobre el fondo */
+}
+
+#wordSearchContainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(14, 2fr); /* Ajusta según el tamaño deseado */
+    gap: 6px;
+    max-width: 450px; /* Ajusta según el tamaño deseado */
+    margin: 0px auto; /* Centra el contenedor horizontalmente y agrega un margen superior */
+    padding-left: 20px; /* Mueve el contenedor a la izquierda agregando un padding */
+    padding-right: 20px;
+
+}
+
+#wordSearchContainer div {
+    width: 50px; /* Ajusta según el tamaño deseado */
+    height: 60px; /* Ajusta según el tamaño deseado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    cursor: pointer;
+    padding-left: -10px;
+}
+
+#wordSearchContainer div.selected {
+    background-color: #add8e6;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding-left: 30px; /* Opcional, si deseas un margen a la izquierda */
+    padding-right: -500px;
+}
+
+section article {
+    background-color: rgb(200, 210, 219);
+    margin: 10rem 0;
+    border-radius: 0.5rem;
+    padding: 0.30rem 0; /* Mantén este padding para el espacio superior e inferior */
+    padding-right: 150px; /* Aumenta el padding en el lado derecho */
+    padding-left: 100px;  /* Puedes agregar esto si deseas que el espacio también aumente a la izquierda */
+}
+
+
+section article:hover {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0.9rem 0.5rem rgba(220, 248, 5, 0.91);
+    cursor: pointer;
+}
+
+
+section article h2, section article p {
+    margin:  1rem;
+}
+
+.selected {
+    background-color: #90ee90; /* Un verde claro para las letras seleccionadas */
+}
+
+.found {
+    background-color: #ffcccb; /* Un rojo claro para las palabras encontradas */
+}
+
+.wordsList {
+    margin: 30px auto;
+    max-width: 90vw;
+    padding: 20px;
+    background-color: rgba(247, 247, 247, 0.8); /* Fondo blanco con opacidad para las listas */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wordsList div {
+    padding: 9px 18px;
+    margin: 5px;
+    background-color: #9a9a9a;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.wordsList div.found::after {
+    content: ' ✔️'; /* Añade una palomita después del texto */
+    color: green; /* Color verde para la palomita */
+}
+
+/* Opcionalmente, puedes ajustar el estilo de la palabra encontrada para diferenciarla aún más */
+.wordsList div.found {
+    background-color: #90ee90; /* Verde claro para indicar que la palabra ha sido encontrada */
+    text-decoration: none; /* Remueve el line-through si prefieres no tachar la palabra */
+}
