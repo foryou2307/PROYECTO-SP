@@ -4,13 +4,63 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="app.css">
-	<title>Sopa de letras</title>
+	<style>
+		/* Estilo para el fondo */
+		body {
+			background-image: url('depositphotos.jpg'); /* Cambia 'fondo.jpg' por el nombre de tu imagen */
+			background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+			background-repeat: no-repeat; /* Evita que la imagen se repita */
+			background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+			margin: 0; /* Elimina el margen por defecto del body */
+		}
+
+		#wordSearchContainer {
+			margin: 20px auto;
+			width: 90%;
+		}
+
+		#wordsList {
+			margin-top: 20px;
+		}
+	</style>
 </head>
 <body>
+
+<h1>RED FIJA Y MÓVIL</h1>
+<section class="container">
+    <article class="Post">
+        <h2>Informacion</h2>
+            <P>Fibra Óptica
+
+                Ventajas: Alta velocidad (hasta 100 Gbps o más), mayor ancho de banda, baja latencia, gran alcance sin pérdida de señal, inmunidad a interferencias, alta seguridad, y durabilidad.
+                Desventajas: Alto costo de instalación, cables frágiles, disponibilidad limitada, y requiere equipos especiales.
+                Cable de Cobre (DSL/ADSL)
+                
+                Ventajas: Bajo costo de instalación, fácil acceso, resistencia al clima y mantenimiento más económico.
+                Desventajas: Velocidades más bajas, ancho de banda limitado, mayor pérdida de señal, susceptibilidad a interferencias, mayor latencia, y menor seguridad.
+                Retención de Clientes de Fibra Óptica:
+                
+                Ofrece velocidades superiores, estabilidad, baja latencia y es ideal para aplicaciones en tiempo real.
+                Es escalable y preparada para el futuro, soportando tecnologías avanzadas como 8K y el Internet de las Cosas.
+                Retención de Clientes de Cable de Cobre:
+                
+                Ideal para quienes buscan una opción económica para actividades diarias.
+                Mejor accesibilidad en zonas rurales y áreas menos densamente pobladas, y mejora continua con tecnologías como VDSL y ADSL+.</P>
+                <div style="text-align: center;">
+                    <img src="5G.jpeg" width="400" />
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="https://empowertalent.com/ciberseguridad/conexiones-de-red-2/" target="_blank">Mas informacion</a>
+                </div>
+                
+    </article>
+</section>
 
 <div id="wordSearchContainer"></div>
 <div id="wordsList" class="wordsList"></div>
 <button id="generateNew">Generar Nueva Sopa de Letras</button>
+
 </body>
 
 <script type="text/javascript" src="app.js"></script>
