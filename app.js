@@ -1,21 +1,28 @@
-const words = ["FIBRA", "ANTENA", "ROAMING", "MODEM",  "WIFI",  "CONECTOR",  "CONEXION",  "SIM",  "LASER",  "REPETIDOR",  "LATENCIA"]; 
-const gridSize = 14; 
+const words = ["FIBRA", "ANTENA", "ROAMING", "MODEM", "WIFI", "CONECTOR", "CONEXION", "SIM", "LASER", "REPETIDOR", "LATENCIA"];
+const gridSize = 14;
 let wordGrid;
-let currentSelection = []; 
-let wordsFound = []; 
+let currentSelection = [];
+let wordsFound = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Configura el título alineado a la izquierda
+    const leftTitle = document.getElementById('leftTitle');
+    if (leftTitle) {
+        leftTitle.textContent = "Redes móvil y fija"; // Asegura el texto
+    }
+
+    // Inicia el juego
     startNewGame();
     document.getElementById('generateNew').addEventListener('click', startNewGame);
 });
 
 function startNewGame() {
     wordGrid = generateEmptyGrid(gridSize);
-    currentSelection = []; 
+    currentSelection = [];
     wordsFound = [];
     placeWordsInGrid(words, wordGrid);
     renderGrid(wordGrid);
-    renderWordsList(words); 
+    renderWordsList(words);
 }
 
 function generateEmptyGrid(size) {
@@ -51,8 +58,8 @@ function renderGrid(grid) {
     grid.forEach((row, rowIndex) => {
         row.forEach((cell, colIndex) => {
             const cellElement = document.createElement('div');
-cellElement.textContent = cell === '_' ? String.fromCharCode(65 + Math.floor(Math.random() * 26)) : cell;
-    cellElement.dataset.index = rowIndex * gridSize + colIndex;
+            cellElement.textContent = cell === '_' ? String.fromCharCode(65 + Math.floor(Math.random() * 26)) : cell;
+            cellElement.dataset.index = rowIndex * gridSize + colIndex;
             cellElement.addEventListener('click', () => selectCell(rowIndex, colIndex, cellElement));
             container.appendChild(cellElement);
         });
@@ -88,7 +95,7 @@ function selectCell(rowIndex, colIndex, cellElement) {
         currentSelection.forEach(idx => {
             document.querySelector(`[data-index="${idx}"]`).classList.add('found');
         });
-       
+
         document.querySelector(`[data-word="${selectedWord}"]`).classList.add('found');
         currentSelection = [];
 
