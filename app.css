@@ -66,14 +66,6 @@ section article {
     padding-left: 100px;  /* Puedes agregar esto si deseas que el espacio también aumente a la izquierda */
 }
 
-
-section article:hover {
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 0.9rem 0.5rem rgba(220, 248, 5, 0.91);
-    cursor: pointer;
-}
-
-
 section article h2, section article p {
     margin:  1rem;
 }
