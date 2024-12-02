@@ -1,4 +1,4 @@
-const words = ["FIBRA", "ANTENA", "ROAMING", "MODEM", "WIFI", "CONECTOR", "CONEXION", "SIM", "LASER", "REPETIDOR", "LATENCIA"];
+const words = ["FIBRA", "ANTENA", "ROAMING", "MODEM", "WIFI", "CONECTOR", "CONEXION", "SIM", "LASER", "REPETIDOR", "LATENCIA", "BITS", "BANDAANCHA"];
 const gridSize = 14;
 let wordGrid;
 let currentSelection = [];
